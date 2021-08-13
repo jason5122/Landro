@@ -29,7 +29,7 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='True')
     world_file_name = 'landro.world'
-    pkg_dir = get_package_share_directory('spawner')
+    pkg_dir = get_package_share_directory('spawner_pkg')
  
     os.environ["GAZEBO_MODEL_PATH"] = os.path.join(pkg_dir, 'models')
  
@@ -45,7 +45,7 @@ def generate_launch_description():
     #spawn_entity = Node(package='gazebo_ros', node_executable='spawn_entity.py',
     #                    arguments=['-entity', 'demo', 'x', 'y', 'z'],
     #                    output='screen')
-    spawn_entity = Node(package='spawner', executable='spawn_demo',
+    spawn_entity = Node(package='spawner_pkg', executable='spawn_demo',
                         arguments=['WarehouseBot', 'demo', '2.5', '-2.5', '0.0'],
                         output='screen')
  

@@ -6,8 +6,8 @@ from launch_ros.actions import Node
 def generate_launch_description():
  
   return LaunchDescription([
-    Node(package='controller', executable='robot_controller',
+    Node(package='controller_pkg', executable='robot_controller',
       output='screen'),
-    Node(package='controller', executable='robot_estimator',
+    Node(package='controller_pkg', executable='robot_estimator',
       output='screen'),
   ])

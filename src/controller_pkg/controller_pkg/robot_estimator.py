@@ -1,12 +1,13 @@
 import math
+import numpy as np
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist 
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
+from std_msgs.msg import Float64MultiArray
 from rclpy.qos import qos_profile_sensor_data
-from std_msgs.msg import Float64MultiArray 
-import numpy as np
  
 class Estimator(Node):
   """

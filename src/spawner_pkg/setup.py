@@ -2,7 +2,7 @@ import os # Operating system library
 from glob import glob # Handles file path names
 from setuptools import setup # Facilitates the building of packages
 
-package_name = 'spawner'
+package_name = 'spawner_pkg'
 
 # Path of the current directory
 cur_directory_path = os.path.abspath(os.path.dirname(__file__))
@@ -40,7 +40,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-          'spawn_demo = spawner.spawn_demo:main'
+          'spawn_demo = spawner_pkg.spawn_demo:main'
         ],
     },
 )

@@ -2,7 +2,7 @@ import os
 from setuptools import setup
 from glob import glob
 
-package_name = 'controller'
+package_name = 'controller_pkg'
 
 setup(
     name=package_name,
@@ -23,8 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-          'robot_controller = controller.robot_controller:main',
-          'robot_estimator = controller.robot_estimator:main'
+          'robot_controller = controller_pkg.robot_controller:main',
+          'robot_estimator = controller_pkg.robot_estimator:main'
         ],
     },
 )
