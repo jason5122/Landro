@@ -2,7 +2,7 @@ import os
 from setuptools import setup
 from glob import glob
 
-package_name = 'warehouse_robot_controller_pkg'
+package_name = 'controller'
 
 setup(
     name=package_name,
@@ -16,15 +16,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='focalfossa',
-    maintainer_email='focalfossa@todo.todo',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='jason',
+    maintainer_email='jjhan@vassar.edu',
+    description='Controls the motion of a robot.',
+    license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-          'robot_controller = warehouse_robot_controller_pkg.robot_controller:main',
-          'robot_estimator = warehouse_robot_controller_pkg.robot_estimator:main'
+          'robot_controller = controller.robot_controller:main',
+          'robot_estimator = controller.robot_estimator:main'
         ],
     },
 )

@@ -26,7 +26,7 @@ def main():
 
     # Get the file path for the robot model
     sdf_file_path = os.path.join(
-        get_package_share_directory("warehouse_robot_spawner_pkg"), "models",
+        get_package_share_directory("spawner"), "models",
         "mobile_warehouse_robot", "model.sdf")
         
     # Create the node
@@ -45,7 +45,7 @@ def main():
 
     # Get path to the robot
     sdf_file_path = os.path.join(
-        get_package_share_directory("warehouse_robot_spawner_pkg"), "models",
+        get_package_share_directory("spawner"), "models",
         "mobile_warehouse_robot", "model.sdf")
 
     # Show file path
